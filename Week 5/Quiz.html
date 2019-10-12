@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Questions: Week 1</title>
+	<style type="text/css">
+		.correct{
+			color:green;
+		}
+		body{	
+			margin: 0;
+			padding: 0;
+			font-family:sans-serif;
+		}
+		#login{
+			text-align: center;
+		}
+		.card1{
+			margin-left: auto;
+			margin-right: auto;
+			height: auto;
+			width: 800px;
+			border: 1px solid #333;
+		}
+		.card2{
+			margin-left: auto;
+			margin-right: auto;
+			height: auto;
+			width: 800px;
+			border: 1px solid #333;
+		}
+		.card3{
+			margin-left: auto;
+			margin-right: auto;
+			height: auto;
+			width: 800px;
+			border: 1px solid #333;
+		}
+		.card4{
+			margin-left: auto;
+			margin-right: auto;
+			height: auto;
+			width: 800px;
+			border: 1px solid #333;
+		}
+		.grades{
+			margin-left: auto;
+			margin-right: auto;
+			height: auto;
+			width: 800px;
+			border: 1px solid #333;
+		}
+		#myBarHTML {
+  			width: 10%;
+  			height: 30px;
+  			background-color: #4CAF50;
+  			text-align: center; /* To center it horizontally (if you want) */
+  			line-height: 30px; /* To center it vertically */
+  			color: white;
+				}
+		#myBarCSS {
+  			width: 76%;
+  			height: 30px;
+  			background-color: #4CAF50;
+  			text-align: center; /* To center it horizontally (if you want) */
+  			line-height: 30px; /* To center it vertically */
+  			color: white;
+				}
+		#myBarJavascript {
+  			width: 35%;
+  			height: 30px;
+  			background-color: #4CAF50;
+  			text-align: center; /* To center it horizontally (if you want) */
+  			line-height: 30px; /* To center it vertically */
+  			color: white;
+				}
+		#myBarAccessibility {
+  			width: 23%;
+  			height: 30px;
+  			background-color: #4CAF50;
+  			text-align: center; /* To center it horizontally (if you want) */
+  			line-height: 30px; /* To center it vertically */
+  			color: white;
+				}	
+	</style>
+</head>
+<body>
+	<div id="login">
+	<h1>Coding4LXD</h1>
+		<form action="/action_page.php">
+  			<input type="text" placeholder="user name" name="user name"><br>
+ 			<input type="password" placeholder="secret password" name="password"><br>
+  			<input type="submit" value="log in">
+		</form>
+	</div>
+	<h1>Quiz</h1>
+	<h2>HTML</h2>
+	<div class="card1">
+		<h3>Question 1</h3>
+		<hr>
+		<p>What tag should I use if I want to add an external javascript file</p>
+		<label><input type="radio" name="card1" value="script" checked> script</label><br>
+		<label><input type="radio" name="card1" value="script" > javascript</label><br>
+		<label><input type="radio" name="card1" value="script" > include</label><br>
+		<label><input type="radio" name="card1" value="script" > style</label>
+	</div>
+	<p class=space></p>
+	<div class="card2">
+		<h3>Question 2</h3>
+		<hr>
+		<p>What tag should I use if I want to add an external css file</p>
+		<label><input type="radio" name="card2" value="script" checked> script</label><br>
+		<label><input type="radio" name="card2" value="script" > javascript</label><br>
+		<label><input type="radio" name="card2" value="script" > include</label><br>
+		<label><input type="radio" name="card2" value="script" > style</label>
+		<div class="feedback">
+			<stong>Feedback:</strong> The answer is D
+		</div>
+	</div>
+	<h2>CSS</h2>
+	<div class="card3">
+		<h3>Question 1</h3>
+		<hr>
+		<p>What tag should I use if I want to add an external javascript file</p>
+		<label><input type="radio" name="card3" value="script" checked> script</label><br>
+		<label><input type="radio" name="card3" value="script" > javascript</label><br>
+		<label><input type="radio" name="card3" value="script" > include</label><br>
+		<label><input type="radio" name="card3" value="script" > style</label>
+	</div>
+	<h2>JavaScript</h2>
+	<div class="card4">
+		<h3>Question 1</h3>
+		<hr>
+		<p>What tag should I use if I want to add an external javascript file</p>
+		<label><input type="radio" name="card4" value="script" checked> script</label><br>
+		<label><input type="radio" name="card4" value="script" > javascript</label><br>
+		<label><input type="radio" name="card4" value="script" > include</label><br>
+		<label><input type="radio" name="card4" value="script" > style</label>
+	</div>
+	<div>
+		<h1>Grades</h1>
+		<div class="grades">
+		<input type="checkbox" id="chboxA" name="chboxGroup" value="option A" checked=""> <label for="chboxA">HTML</label>
+		<p>Questions Mastered: 32/100</p>
+		<div id="myProgress">
+  			<div id="myBarHTML">32%</div>
+				</div>
+		<br>
+		<input type="checkbox" id="chboxA" name="chboxGroup" value="option A" > <label for="chboxA">CSS</label>
+		<p>Questions Mastered: 76/100</p>
+		<div id="myProgress">
+  			<div id="myBarCSS">76%</div>
+				</div>
+		<br>
+		<input type="checkbox" id="chboxA" name="chboxGroup" value="option A" > <label for="chboxA">Javascript</label>
+		<p>Questions Mastered: 35/100</p>
+		<div id="myProgress">
+  			<div id="myBarJavascript">35%</div>
+				</div>
+		<br>
+		<input type="checkbox" id="chboxA" name="chboxGroup" value="option A" > <label for="chboxA">Accessiblity</label>
+		<p>Questions Mastered: 23/100</p>
+		<div id="myProgress">
+  			<div id="myBarAccessibility">32%</div>
+				</div>
+		</div>
+	</div>
+</body>
+</html>
