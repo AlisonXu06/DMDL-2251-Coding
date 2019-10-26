@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="{CHARSET}">
+		<title></title>
+	</head>
+	<body>
+
+		<div id="container"></div>
+
+		<script type="text/javascript">
+			
+	
+			let sneakers = [
+				{
+					brand: "Puma",
+					colors: ["red", "black", "white"]
+				},
+				{
+					brand: "Nike",
+					colors: ["orange", "green"]
+				},
+				{
+					brand: "Adidas",
+					colors: ["purple", "pink", "white"]
+				}
+	
+			]
+	
+			
+			const container_ele = document.querySelector("#container"); 
+			for (var i=0;i<sneakers.length;i++)
+			 {
+				const brand_ele=document.createElement("h2");
+				brand_ele.innerHTML=sneakers[i].brand;
+				container_ele.appendChild(brand_ele);
+					for (var y=0;y<sneakers[i].colors.length;y++) {
+					
+					const button_ele=document.createElement("button");
+					button_ele.innerHTML=sneakers[i].colors[y];
+					button_ele.color=sneakers[i].colors[y];
+						container_ele.appendChild(button_ele);
+				}
+			}
+		</script>
+
+
+	</body>
+</html>

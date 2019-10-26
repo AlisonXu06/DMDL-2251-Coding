@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<div id="container"></div>
+
+	<script type="text/javascript">
+		
+		let artist = ["picasso", "dali", "Frida"];
+		let inventors = ["tesla", "edison"];
+
+		let people = artist.concat (inventors);
+
+		const containerEle = document.querySelector ("#container");
+		const peopleList_ele = document.createElement ("UL");
+		containerEle. appendChild (peopleList_ele);
+
+		//Create a for loop that loops through each persons name
+
+		// INSIDE the for loop create an <li>
+
+		// make sure you append this to the <ul> which is stored in a variable above named 'peopleList_ele'.
+
+		//add the person's name in the <li>tesla</li>
+
+		for (var i = 0; i<people.length; i++){const name=document.createElement("li"); 
+			name. innerHTML = people [i]; 
+			peopleList_ele. appendChild (name);
+			}
+
+
+	</script>
+
+
+</body>
+</html>
