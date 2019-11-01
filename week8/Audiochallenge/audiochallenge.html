@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<audio controls="controls"  src="" id="playaudio" >
+  
+</audio>
+volume:<input type="range" id="range1" min="0" max="100" value="50" id="volumeRange"> <span id="vn"></span>
+<div>
+
+
+	<!-- dropdown will have the filename as values of each option -->
+	<select id="audioSelector">
+		<option value="videos/Flower.mp4">Flower</option>
+		<option value="videos/Jellyfish.mp4">Jellyfish</option>
+		<option value="videos/MorningMist.mp4">Morning Mist</option>
+		<option value="videos/Under.mp4">Under</option>
+	</select>
+
+	
+	<!-- buttons -->
+	
+	<button id="vidLoad_btn">load</button>
+	<button id="vidPlay_btn">play</button>
+	<button id="vidPause_btn">pause</button>
+	<span id="timestamp"></span>
+
+</div>
+<script type="text/javascript">
+	
+	let music = [
+		{
+			title: "bensound-summer",
+			file: "folder/bensound-summer.mp3"
+		},
+		{
+			title: "bensound-hey",
+			file: "folder/bensound-hey.mp3"
+		}
+	];
+	const audioSelector = document.querySelector("#audioSelector");
+	audioSelector.options.length=0;
+	for(let i=0;i<music.length;i++){
+		
+		audioSelector.options.add(new Option(music[i].title,""));
+		audioSelector.options[i].setAttribute('value',music[i].file);
+	}
+
+
+
+	//store all UI in in variables	
+	const videoPlayer = document.querySelector("#playaudio");
+	const vidLoad_btn = document.querySelector("#vidLoad_btn");
+	const vidPlay_btn = document.querySelector("#vidPlay_btn");
+	const vidPause_btn = document.querySelector("#vidPause_btn");
+	const timestamp = document.querySelector("#timestamp");
+	const range_s =document.querySelector("#range1");
+
+	//load video that is selected from the drop down
+	let loadVideo = () => {
+		document.querySelector("#playaudio").src = audioSelector.value;
+		videoPlayer.load();
+		let voll = range_s.value;
+		document.querySelector("#vn").innerHTML=voll+"%";
+	}
+
+	//function to play video
+	let playVideo = () => {
+		videoPlayer.play();
+	}
+
+	//function to pause video
+	let pauseVideo = () => {
+		videoPlayer.pause();
+	}
+
+	//function to get time from the video player
+	//NOTE: 
+	let getTimestamp = (event) => {
+		let timer=event.target.currentTime;
+		timestamp.innerHTML = Math.round(timer)+"s";
+	}
+	
+	
+	let updateVolume = () => {
+		let voll = range_s.value;
+		document.querySelector("#vn").innerHTML=voll+"%";
+		voll =voll*1/100;
+		videoPlayer.volume = voll;
+		
+		console.log(videoPlayer.volume);
+	}
+	
+
+	//Add Event listeners too all the UI and point callbacks to functions
+
+	vidLoad_btn.addEventListener("click", loadVideo);
+	vidPlay_btn.addEventListener("click", playVideo);
+	vidPause_btn.addEventListener("click", pauseVideo);
+	range_s.addEventListener("change", updateVolume);
+	videoPlayer.addEventListener("timeupdate", getTimestamp);
+
+</script>
+
+
+</body>
+</html>

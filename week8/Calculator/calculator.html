@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title></title>
+</head>
+<body>
+
+ <input type="text" id="num1"> <span id="operatorBox">+</span> <input type="text" id="num2"> = <span id="answerBox"></span>
+ <div>
+  <button id="add_btn">+</button><button id="subtract_btn">-</button><button id="divide_btn">÷</button><button id="multiply_btn">×</button>
+ </div>
+
+ <script type="text/javascript">
+  
+  // storing operator special charectors so you could easily refence them with dot notatin 
+  // (ie. opertators.add)
+  const operators = {
+   add : "+",
+   divide: "÷",
+   multiply: "×",
+   subtract: "-"
+  }
+
+  // store all of your buttons, input fields, and spans in variables
+  const num1 = document.querySelector("#num1");
+  const num2 = document.querySelector("#num2");
+  const add_btn= document.querySelector("#add_btn");
+  const subtract_btn= document.querySelector("#subtract_btn");
+  const divide_btn= document.querySelector("#divide_btn");
+  const multiply_btn= document.querySelector("#multiply_btn");
+  const answerBox = document.querySelector("#answerBox");
+  const operatorBox = document.querySelector("#operatorBox");
+  // create 4 function getSum, getDifference, division, getProduct
+  // do math and thten add content to item
+  let getSum = () => {
+		operatorBox.innerHTML=operators.add;
+		var sum=num1.value*1+num2.value*1;
+		answerBox.innerHTML=sum;
+	}
+  
+	let getDifference = () => {
+			operatorBox.innerHTML=operators.subtract;
+			var sum=num1.value*1-num2.value*1;
+			answerBox.innerHTML=sum;
+		}
+	let division = () => {
+			operatorBox.innerHTML=operators.divide;
+			var sum=num1.value*1/num2.value*1;
+			answerBox.innerHTML=sum;
+		}
+	let getProduct = () => {
+			operatorBox.innerHTML=operators.multiply;
+			var sum=num1.value*1*num2.value*1;
+			answerBox.innerHTML=sum;
+		}
+
+  // add event listners with a click event for all of your buttons and add callback functin name
+  add_btn.addEventListener("click", getSum);
+  subtract_btn.addEventListener("click", getDifference);
+  multiply_btn.addEventListener("click", getProduct); 
+  divide_btn.addEventListener("click", division);
+ </script>
+
+</body>
+</html>
