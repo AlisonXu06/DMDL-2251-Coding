@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<style type="text/css">
+			header {
+				display: flex;
+				justify-content: space-between;
+				width: 80%;
+				margin-left: 10%;
+			}
+
+			#endpractice {
+				height: 30px;
+				color: black
+			}
+
+			.card {
+				width: 80%;
+				margin-left: 10% !important;
+				height: 200px;
+				border: 1px solid #000000;
+				margin: 10px 0;
+				padding: 10px;
+			}
+			.style {
+				height: 30px;
+				border-radius: 10px;
+				background-color: #38568E;
+				color: white;
+			}
+
+			#info div {
+				width: 30px;
+				height: 30px;
+				border-radius: 15px;
+				display: inline-block;
+				border: 1px solid #ccc;
+			}
+
+			header {
+				top: 0;
+			}
+
+			footer {
+				display: flex;
+				position: fixed;
+				bottom: 0;
+				width: 100%;
+				padding: 10px 10%;
+			}
+			footer #info{
+				display: inline-block;
+				width: 80%;
+			}
+			
+			footer button{
+				width: 150px;
+			}
+				
+			#progressDots {
+				display: flex;
+				flex-direction: row;
+				width: 200px;
+				justify-content: space-between;
+			}
+
+			/* answer */
+			#info .currect {
+				background-color: #cbf2cd;
+			}
+
+			#info .incurrect {
+				background-color: #f2cbd0;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>Quiz</h1>
+			<button id="endpractice">End practice</button>
+		</header>
+
+		<header>
+			<h2 id="currentQuestionHeader"></h2>
+		</header>
+		<hr>
+
+		<div class="card">
+			<p id="questionText"></p>
+			<ol id="listItems"></ol>
+		</div>
+
+		<footer>
+			<div id="info">
+				<div class="currect"></div>
+				<div class="incurrect"></div>
+				<div class="currect"></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<a href="http://google.com">View Report</a>
+			</div>
+			<button class="style">Check answers</button>
+		</footer>
+
+		<script type="text/javascript" src="FlashAppdata.js"></script>
+		<script type="text/javascript" src="FlashApp.js"></script>
+
+	</body>
+</html>
