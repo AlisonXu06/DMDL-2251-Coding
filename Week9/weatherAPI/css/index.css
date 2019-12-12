@@ -1,0 +1,25 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	text-align: center;
+	padding: 20px;
+}
+input,button{
+	height: 30px;
+}
+#weather{
+	display: flex;
+	align-items: center;
+	flex-direction: column;	
+	justify-content: space-around;
+	width: 90%;
+	margin-left: 5%;
+	height: 500px;
+	border: 1px solid #ccc;
+}
+#weather img{
+	width: 200px;
+	height: 200px;
+}
